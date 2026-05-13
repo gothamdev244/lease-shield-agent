@@ -6,6 +6,7 @@ export const triggers = { webhook: true };
 export default async function ({ init, payload }: FlueContext) {
   const harness = await init({
     model: 'google/gemini-2.5-flash',
+    sandbox: 'local',
   });
   const session = await harness.session(payload.sessionId || 'default');
 
