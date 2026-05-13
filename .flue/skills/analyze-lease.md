@@ -5,6 +5,12 @@ description: Clause-by-clause analysis of an Indian rental lease agreement
 
 Analyze the following rental lease agreement clause by clause. For each distinct clause or section in the lease, produce a structured analysis.
 
+**IMPORTANT**: If the provided text is NOT a rental/lease agreement (e.g., it's a resume, article, technical document, etc.), return this exact JSON:
+```json
+{"clauses": [], "summary": {"total": 0, "violations": 0, "risks": 0, "traps": 0, "safe": 0}}
+```
+Do NOT try to force non-lease content into the analysis schema.
+
 ## Inputs
 
 - **leaseText**: `{{leaseText}}` — The full text of the lease agreement
